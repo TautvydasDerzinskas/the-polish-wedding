@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "noUnusedParameters": true,
+        "noUnusedLocals": true,
+        "noImplicitAny": false,
+        "removeComments": true,
+        "sourceMap": true,
+        "module":"system",
+        "target": "es5",
+        "outFile": "Source/app.js",
+        "typeRoots": [
+            "node_modules/@types"
+        ]
+    },
+    "exclude": [
+      "node_modules"
+    ]
+}

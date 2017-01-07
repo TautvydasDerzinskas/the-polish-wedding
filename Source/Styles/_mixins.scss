@@ -1,0 +1,31 @@
+/*
+    Media queries
+*/
+$phablet-width: 550px;
+$tablet-width: 750px;
+$desktop-width: 750px;
+$hd-desktop-width: 750px;
+
+@mixin phablet {
+  @media (min-width: #{$phablet-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin hd-desktop {
+  @media (min-width: #{$hd-desktop-width}) {
+    @content;
+  }
+}

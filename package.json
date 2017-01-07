@@ -1,0 +1,25 @@
+{
+  "name": "our_wedding_page",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "prestart": "npm install",
+    "start": "tsc gulpfile.ts",
+    "poststart": "gulp",
+    "predev": "npm install",
+    "dev": "tsc gulpfile.ts",
+    "postdev": "gulp quick"
+  },
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-sass": "3.0.0",
+    "gulp-tslint": "7.0.1",
+    "gulp-typescript": "3.1.4",
+    "tslint": "4.3.1",
+    "typescript": "2.1.4"
+  },
+  "dependencies": {
+    "@types/jquery": "^2.0.39",
+    "@types/node": "^6.0.58"
+  }
+}
