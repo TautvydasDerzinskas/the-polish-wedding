@@ -39,7 +39,7 @@ namespace Tasks {
 						"Source/app.scss"
 					])
 					.pipe(this.sass({ outputStyle: "compressed" }))
-					.pipe(this.gulp.dest("."));
+					.pipe(this.gulp.dest("Source/"));
 			});
 		}
 		public setupTypeScriptLintingTask() {

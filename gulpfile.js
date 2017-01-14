@@ -25,7 +25,7 @@ var Tasks;
                     "Source/app.scss"
                 ])
                     .pipe(_this.sass({ outputStyle: "compressed" }))
-                    .pipe(_this.gulp.dest("."));
+                    .pipe(_this.gulp.dest("Source/"));
             });
         };
         TaskUtility.prototype.setupTypeScriptLintingTask = function () {

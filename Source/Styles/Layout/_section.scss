@@ -1,0 +1,17 @@
+.section {
+	position: relative;
+	padding: 8rem 0 7rem;
+	text-align: center;
+
+	@include phablet {
+		padding: 12rem 0 11rem;
+	}
+
+	@include tablet {
+		padding: 14rem 0 15rem;
+	}
+
+	@include desktop {
+		padding: 20rem 0 19rem;
+	}
+}

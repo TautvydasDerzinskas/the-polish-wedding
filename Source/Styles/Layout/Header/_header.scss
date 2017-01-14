@@ -1,0 +1,39 @@
+header {
+	h1 {
+		font-family: $variation-font-2;
+	}
+
+	.logo {
+		position: relative;
+
+		.logo-image {
+			position: relative;
+			margin: 3rem auto -23rem;
+			max-width: 100%;
+
+			@include phablet {
+				position: absolute;
+				bottom: -18rem;
+				right: -3rem;
+				max-height: 362px;
+				z-index: 3;
+
+				max-width: none;
+			}
+
+			@include tablet {
+				bottom: -14rem;
+
+				max-height: 510px;
+				max-width: 100%;
+			}
+
+			@include desktop {
+				bottom: -25rem;
+				max-height: 615px;
+			}
+
+		}
+
+	}
+}
