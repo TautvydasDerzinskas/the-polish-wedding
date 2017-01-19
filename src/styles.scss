@@ -1,0 +1,26 @@
+@import "assets/Styles/variables";
+@import "assets/Styles/Normalize/normalize";
+@import "assets/Styles/Skeleton/skeleton";
+
+@import "assets/Styles/mixins";
+
+@import "assets/Styles/Layout/Header/header";
+@import "assets/Styles/Layout/section";
+
+.text-pink {
+	color: $rosePink;
+}
+
+.text-blue {
+	color: $gumBlue;
+}
+
+.background-milkrose {
+	background-color: $bloodyMilk;
+}
+
+.separator-bottom {
+	background-image: url("assets/Images/separator2.png");
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
