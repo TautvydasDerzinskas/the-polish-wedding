@@ -14,7 +14,7 @@ export class CountDownComponent implements OnInit, OnDestroy  {
 	private subscription;
 
 	ngOnInit() {
-		const weddingDate = "Aug 13 2017",
+		const weddingDate = new Date("Aug 13, 2017 15:00:00").getTime(),
 			timer = TimerObservable.create(2000, 1000);
 
 		this.subscription = timer.subscribe(t => {
@@ -32,10 +32,8 @@ export class CountDownComponent implements OnInit, OnDestroy  {
 	public vm_seconds: number = 0;
 
 	private getTimeRemaining(endtime){
-		console.log(endtime);
-
-		const currentDate: string = (new Date()).toDateString(),
-			t = Date.parse(endtime) - Date.parse(currentDate),
+		const currentDate: number = (new Date()).getTime(),
+			t = endtime - currentDate,
 			seconds = Math.floor( (t / 1000) % 60 ),
 			minutes = Math.floor( (t / 1000 / 60) % 60 ),
 			hours = Math.floor( (t / (1000 * 60 * 60)) % 24 ),

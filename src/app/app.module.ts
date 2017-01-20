@@ -4,10 +4,14 @@ import { FormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
 
 import { CountDownComponent } from "./count-down/count-down.component";
+import { GoogleAnalyticsComponent } from "./google-analytics/google-analytics.component";
+import { FacebookCommentsComponent } from './facebook-comments/facebook-comments.component';
 
 @NgModule({
 	declarations: [
-		CountDownComponent
+		CountDownComponent,
+		GoogleAnalyticsComponent,
+		FacebookCommentsComponent
 	],
 	imports: [
 		BrowserModule,
@@ -15,6 +19,10 @@ import { CountDownComponent } from "./count-down/count-down.component";
 		HttpModule
 	],
 	providers: [],
-	bootstrap: [CountDownComponent]
+	bootstrap: [
+		CountDownComponent,
+		GoogleAnalyticsComponent,
+		FacebookCommentsComponent
+	]
 })
 export class AppModule { }
