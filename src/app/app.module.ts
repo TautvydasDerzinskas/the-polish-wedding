@@ -5,7 +5,7 @@ import { HttpModule } from "@angular/http";
 
 import { CountDownComponent } from "./count-down/count-down.component";
 import { GoogleAnalyticsComponent } from "./google-analytics/google-analytics.component";
-import { FacebookCommentsComponent } from './facebook-comments/facebook-comments.component';
+import { FacebookCommentsComponent } from "./facebook-comments/facebook-comments.component";
 
 @NgModule({
 	declarations: [
