@@ -13,7 +13,7 @@ const lithuanianPageRoutes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(lithuanianPageRoutes)],
+    RouterModule.forChild(lithuanianPageRoutes)],
   exports: [
     RouterModule
   ],

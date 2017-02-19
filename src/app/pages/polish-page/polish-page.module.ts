@@ -13,7 +13,7 @@ const polishPageRoutes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(polishPageRoutes)],
+    RouterModule.forChild(polishPageRoutes)],
   exports: [
     RouterModule
   ],

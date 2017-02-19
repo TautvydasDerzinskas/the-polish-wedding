@@ -8,10 +8,6 @@ const routes: Routes = [
   {
     path: '',
     children: []
-  },
-  {
-    path: '**',
-    component: Page404Component
   }
 ];
 
