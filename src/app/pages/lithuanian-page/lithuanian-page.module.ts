@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { SharedPageComponentsModule } from '../../app.shared.module';
+
 // Importing pages
 import { LithuanianPageComponent } from './lithuanian-page.component';
 
@@ -13,6 +15,7 @@ const lithuanianPageRoutes: Routes = [
 
 @NgModule({
   imports: [
+    SharedPageComponentsModule,
     RouterModule.forChild(lithuanianPageRoutes)],
   exports: [
     RouterModule

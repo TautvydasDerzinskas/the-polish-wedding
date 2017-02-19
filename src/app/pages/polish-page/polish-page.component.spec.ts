@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PolishPageComponent } from './polish-page.component';
+import { SharedPageComponentsModule } from '../../app.shared.module';
 
 describe('PolishPageComponent', () => {
   let component: PolishPageComponent;
@@ -8,7 +9,8 @@ describe('PolishPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PolishPageComponent ]
+      declarations: [ PolishPageComponent ],
+      imports: [SharedPageComponentsModule]
     })
     .compileComponents();
   }));

@@ -7,6 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { NgReduxModule } from '@angular-redux/store';
 import { NgReduxRouterModule } from '@angular-redux/router';
 
+import { GoogleAnalyticsComponent } from './components/google-analytics/google-analytics.component';
+import { FacebookCommentsComponent } from './components/facebook-comments/facebook-comments.component';
+
 import { AppComponent } from './app.component';
 
 import { PolishPageModule } from './pages/polish-page/polish-page.module';
@@ -15,8 +18,11 @@ import { Page404Module } from './pages/404-page/404-page.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GoogleAnalyticsComponent,
+    FacebookCommentsComponent,
   ],
+  exports: [],
   imports: [
     BrowserModule,
     FormsModule,

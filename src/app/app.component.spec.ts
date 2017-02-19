@@ -1,6 +1,8 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { GoogleAnalyticsComponent } from './components/google-analytics/google-analytics.component';
+import { FacebookCommentsComponent } from './components/facebook-comments/facebook-comments.component';
 
 describe('AppComponent', () => {
   beforeEach(() => {
@@ -9,7 +11,9 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        GoogleAnalyticsComponent,
+        FacebookCommentsComponent
       ],
     });
     TestBed.compileComponents();
