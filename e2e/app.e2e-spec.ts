@@ -1,14 +1,14 @@
-import { WeddingPagePage } from './app.po';
+import { ThePolishWeddingPage } from './app.po';
 
-describe('wedding-page App', () => {
-  let page: WeddingPagePage;
+describe('the-polish-wedding App', () => {
+  let page: ThePolishWeddingPage;
 
   beforeEach(() => {
-    page = new WeddingPagePage();
+    page = new ThePolishWeddingPage();
   });
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('wp works!');
+    expect(page.getParagraphText()).toEqual('tpw works!');
   });
 });

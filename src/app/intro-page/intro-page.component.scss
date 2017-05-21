@@ -1,0 +1,191 @@
+@import "../shared/styles/mixins";
+
+
+// Local variables
+$default-flag-width: 230px;
+$default-flag-height: 106px;
+
+$tpw-white: #FFF;
+$tpw-yellow: #f7dc06;
+$tpw-green: #39a216;
+$tpw-red: #ef2800;
+
+$tpw-border: #ddd;
+
+$colors: (white, $tpw-white),
+        (yellow, $tpw-yellow),
+        (green, $tpw-green),
+        (red, $tpw-red);
+
+// Generics
+@each $colorName, $color in $colors {
+  .#{$colorName}-bg {
+    background-color: $color;
+  }
+}
+
+// Intro box
+.tpw-intro-wrap {
+  display: table;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+
+  > div {
+    display: table-cell;
+    vertical-align: middle;
+
+    > div {
+      margin: 0 auto;
+      max-width: 600px;
+      position: relative;
+
+      > img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+$tpw-flags-wrap-width: 250px;
+$twp-flags-wrap-shadow-size: 5px;
+$twp-flags-wrap-shadow-color: rgba(197, 197, 197, 0.8);
+.tpw-flags-wrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: $tpw-flags-wrap-width;
+  margin-left: -($tpw-flags-wrap-width/2) - 15px;
+  background-color: $tpw-white;
+  box-shadow: $twp-flags-wrap-shadow-size 0 5px -4px $twp-flags-wrap-shadow-color, -$twp-flags-wrap-shadow-size 0 5px -4px $twp-flags-wrap-shadow-color;
+
+  > div {
+    display: table;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+
+    > div {
+      display: table-cell;
+      vertical-align: middle;
+
+      > div {
+        margin: 0 auto;
+        max-width: 600px;
+        position: relative;
+      }
+    }
+  }
+
+}
+
+// Flags
+.flag {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: $default-flag-width;
+	height: $default-flag-height;
+	background-color: $tpw-white;
+	overflow: hidden;
+	cursor: pointer;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+
+	@include transition(all 0.2s ease-in-out);
+
+  border: 1px solid $tpw-border;
+
+  @include box-shadow(0 8px 6px -6px $twp-flags-wrap-shadow-color);
+
+  > .hearth {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: url('../../assets/hearth.png');
+    background-size: auto 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include opacity(0);
+    @include transition(all 0.6s ease-in-out);
+  }
+
+	&:hover {
+		transform: scale(1.3);
+
+    > .hearth {
+      @include opacity(1);
+    }
+	}
+
+  .back, .front {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+    > div {
+      display: inline-block;
+      width: 100%;
+      height: 33.333333%;
+      flex: 1;
+    }
+  }
+
+  .back {
+    @include opacity(0.5);
+    @include transition(all 0.6s ease-in-out);
+  }
+
+  .front {
+    > div {
+      margin-left: 100%;
+
+      $times: 0.6, 0.5, 0.4;
+      @each $time in $times {
+        $i: index($times, $time);
+        &.line-#{$i} {
+          @include transition(all #{$time}s ease-in-out);
+        }
+      }
+
+    }
+  }
+
+  &:hover {
+    & .back {
+      @include opacity(1);
+    }
+
+    & .front > div {
+      margin-left: 0;
+    }
+  }
+
+  &.polish {
+    background-color: darken($tpw-white, 10%);
+  }
+
+  &.gb {
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNjAgMzAiIGhlaWdodD0iNjAwIj4NCjxkZWZzPg0KPGNsaXBQYXRoIGlkPSJ0Ij4NCjxwYXRoIGQ9Im0zMCwxNWgzMHYxNXp2MTVoLTMwemgtMzB2LTE1enYtMTVoMzB6Ii8+DQo8L2NsaXBQYXRoPg0KPC9kZWZzPg0KPHBhdGggZmlsbD0iIzAwMjQ3ZCIgZD0ibTAsMHYzMGg2MHYtMzB6Ii8+DQo8cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iNiIgZD0ibTAsMGw2MCwzMG0wLTMwbC02MCwzMCIvPg0KPHBhdGggc3Ryb2tlPSIjY2YxNDJiIiBzdHJva2Utd2lkdGg9IjQiIGQ9Im0wLDBsNjAsMzBtMC0zMGwtNjAsMzAiIGNsaXAtcGF0aD0idXJsKCN0KSIvPg0KPHBhdGggc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEwIiBkPSJtMzAsMHYzMG0tMzAtMTVoNjAiLz4NCjxwYXRoIHN0cm9rZT0iI2NmMTQyYiIgc3Ryb2tlLXdpZHRoPSI2IiBkPSJtMzAsMHYzMG0tMzAtMTVoNjAiLz4NCjwvc3ZnPg0K');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include opacity(0.5);
+
+    &:hover {
+      @include opacity(1);
+    }
+  }
+}

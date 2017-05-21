@@ -1,0 +1,19 @@
+@mixin box-shadow($args...) {
+	-webkit-box-shadow: $args;
+	-moz-box-shadow: $args;
+	box-shadow: $args;
+}
+
+/*
+
+  USAGE:
+
+  div {
+    color: gray;
+    @include box-shadow(0 8px 6px -6px #000);
+    &:hover {
+      color: black;
+    }
+  }
+
+*/

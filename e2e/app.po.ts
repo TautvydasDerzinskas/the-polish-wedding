@@ -1,11 +1,11 @@
 import { browser, element, by } from 'protractor';
 
-export class WeddingPagePage {
+export class ThePolishWeddingPage {
   navigateTo() {
     return browser.get('/');
   }
 
   getParagraphText() {
-    return element(by.css('wp-root h1')).getText();
+    return element(by.css('tpw-root h1')).getText();
   }
 }

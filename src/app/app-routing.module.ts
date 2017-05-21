@@ -1,19 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-// Importing pages
-import { Page404Component } from './pages/404-page/404-page.component';
+import { IntroPageComponent } from './intro-page/intro-page.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 const routes: Routes = [
   {
     path: '',
-    children: []
+    children: [],
+    component: IntroPageComponent
+  },
+  {
+    path: 'info/:language',
+    children: [],
+    component: MainPageComponent
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-  providers: []
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

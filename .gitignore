@@ -3,6 +3,7 @@
 # compiled output
 /dist
 /tmp
+/out-tsc
 
 # dependencies
 /node_modules
@@ -18,7 +19,6 @@
 
 # IDE - VSCode
 .vscode/*
-.editorconfig
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -27,7 +27,7 @@
 # misc
 /.sass-cache
 /connect.lock
-/coverage/*
+/coverage
 /libpeerconnection.log
 npm-debug.log
 testem.log
@@ -37,6 +37,6 @@ testem.log
 /e2e/*.js
 /e2e/*.map
 
-#System Files
+# System Files
 .DS_Store
 Thumbs.db

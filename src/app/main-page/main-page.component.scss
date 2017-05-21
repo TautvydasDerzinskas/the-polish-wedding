@@ -1,0 +1,19 @@
+h1 {
+	width: 100%;
+}
+
+.tpw-header {
+	background-color: #000;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-image: url('/assets/header.png');
+	position: relative;
+	margin-bottom: 10rem;
+	padding: 5rem 0 25rem 0;
+
+	color: #FFF;
+
+	h1, h4 {
+		text-shadow: 1px 1px 1px #000;
+	}
+}
