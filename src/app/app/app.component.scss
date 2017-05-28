@@ -1,0 +1,12 @@
+@import "../shared/styles/variables";
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: $tpw-font-default;
+  background-color: $tpw-background;
+  padding-bottom: 2rem;
+}
+
+.tpw-primary-text, h1 {
+  color: $tpw-primary;
+}

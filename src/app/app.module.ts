@@ -16,6 +16,8 @@ import { AppComponent } from './app/app.component';
 import { GoogleMapComponent } from './main-page/components/google-map/google-map.component';
 import { CountDownComponent } from './main-page/components/count-down/count-down.component';
 import { FacebookCommentsComponent } from './main-page/components/facebook-comments/facebook-comments.component';
+import { FaqComponent } from './main-page/components/faq/faq.component';
+import { HeartBeatComponent } from './main-page/components/heart-beat/heart-beat.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
@@ -29,7 +31,9 @@ export function HttpLoaderFactory(http: Http) {
     MainPageComponent,
     AppComponent,
     GoogleMapComponent,
-    FacebookCommentsComponent
+    FacebookCommentsComponent,
+    FaqComponent,
+    HeartBeatComponent
   ],
   exports: [
     CountDownComponent,

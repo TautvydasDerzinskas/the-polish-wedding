@@ -1,9 +1,1 @@
-<div class="container-fluid mt-2">
-  <div class="row">
-    <div class="col">
-      <h1>
-        {{ vm_days }} days, <span>{{ vm_hours }}</span> hours, <span>{{ vm_minutes }}</span> minutes, <span>{{ vm_seconds }}</span>        seconds...
-      </h1>
-    </div>
-  </div>
-</div>
+<h6 [translate]="'timeRemaining'" [translateParams]="{ days: vm_days, hours: vm_hours, minutes: vm_minutes, seconds: vm_seconds }"></h6>

@@ -1,11 +1,11 @@
 <div class="tpw-header">
 	<h1 class="text-center">{{ 'headerTitle' | translate }}</h1>
-	<h4 class="text-center">{{ 'headerDesc' | translate }}</h4>
+	<h3 class="text-center">{{ 'headerDesc' | translate }}</h3>
+	<tpw-count-down></tpw-count-down>
+	<tpw-heart-beat></tpw-heart-beat>
 </div>
 
-<tpw-count-down></tpw-count-down>
-
-<div class="container-fluid mt-2">
+<div class="container mt-5">
 	<div class="row">
 		<h1 class="text-center">{{ 'welcome' | translate }}</h1>
 	</div>
@@ -14,100 +14,141 @@
 	</div>
 </div>
 
-<div class="container-fluid mt-2">
+<div class="container mt-5">
 	<div class="row">
 		<h1 class="text-center">{{ 'locations' | translate }}</h1>
-	</div>
-	<div class="row">
-		<p>{{ 'locationsDesc' | translate }}</p>
 	</div>
 </div>
 
 <tpw-google-map></tpw-google-map>
 
-<div class="container-fluid mt-4">
+<div class="container mt-4">
 	<div class="row no-border-cards">
 		<div class="col-lg-4 col-md-12">
-			<div class="card border-0">
+			<div class="card border-0 h-100">
 				<div class="card-block">
 					<h3 class="card-title text-center">{{ 'dukla' | translate }}</h3>
 					<p class="card-text">{{ 'duklaDesc' | translate }}</p>
 				</div>
+				<div class="tpw-small-thumb">
+					<div class="tpw-place dukla"></div>
+				</div>
 			</div>
 		</div>
 
 		<div class="col-lg-4 col-md-6">
-			<div class="card border-0">
+			<div class="card border-0 h-100">
 				<div class="card-block">
 					<h3 class="card-title text-center">{{ 'krosno' | translate }}</h3>
 					<p class="card-text">{{ 'krosnoDesc' | translate }}</p>
 				</div>
+				<div class="tpw-small-thumb">
+					<div class="tpw-place krosno"></div>
+				</div>
 			</div>
 		</div>
 
 		<div class="col-lg-4 col-md-6">
-			<div class="card border-0">
+			<div class="card border-0 h-100">
 				<div class="card-block">
 					<h3 class="card-title">{{ 'rzesow' | translate }}</h3>
 					<p class="card-text">{{ 'rzesowDesc' | translate }}</p>
+				</div>
+				<div class="tpw-small-thumb">
+					<div class="tpw-place rzeszow"></div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
 
-<div class="container-fluid mt-2">
+<div class="container mt-5">
 	<div class="row">
 		<h1 class="text-center">{{ 'sheadule' | translate }}</h1>
 	</div>
 	<div class="row">
-		<div class="col-lg-6">
-			<h4 class="text-center">{{ 'dayOne' | translate }}</h4>
-			<ul class="list-group">
-				<li class="list-group-item flex-column align-items-start border-0">
-					<div class="d-flex w-100 justify-content-between">
-						<h5 class="mb-1">{{ 'dayOneEventOneTitle' | translate }}</h5>
-						<small>13:30</small>
-					</div>
-					<p class="mb-1">{{ 'dayOneEventOneDesc' | translate }}</p>
-					<small class="text-muted">{{ 'dayOneEventOneFullDate' | translate }}</small>
-				</li>
-				<li class="list-group-item flex-column align-items-start border-0">
-					<div class="d-flex w-100 justify-content-between">
-						<h5 class="mb-1">{{ 'dayOneEventTwoTitle' | translate }}</h5>
-						<small>14:30</small>
-					</div>
-					<p class="mb-1">{{ 'dayOneEventTwoDesc' | translate }}</p>
-					<small class="text-muted">{{ 'dayOneEventTwoFullDate' | translate }}</small>
-				</li>
-			</ul>
+		<div class="col-lg-4">
+			<div class="card border-0 h-100">
+				<div class="card-block">
+					<h4 class="card-title text-center">{{ 'dayOne' | translate }}</h4>
+					<ul class="list-group">
+						<li class="list-group-item flex-column align-items-start border-0">
+							<div class="d-flex w-100 justify-content-between">
+								<h5 class="mb-1"><span class="badge badge-primary">13:30</span> {{ 'dayOneEventOneTitle' | translate }}</h5>
+							</div>
+							<p class="mb-1">{{ 'dayOneEventOneDesc' | translate }}</p>
+							<small class="text-muted">{{ 'dayOneEventOneFullDate' | translate }}</small>
+						</li>
+						<li class="list-group-item flex-column align-items-start border-0">
+							<div class="d-flex w-100 justify-content-between">
+								<h5 class="mb-1"><span class="badge badge-primary">14:30</span> {{ 'dayOneEventTwoTitle' | translate }}</h5>
+							</div>
+							<p class="mb-1">{{ 'dayOneEventTwoDesc' | translate }}</p>
+							<small class="text-muted">{{ 'dayOneEventTwoFullDate' | translate }}</small>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
-		<div class="col-lg-6">
-			<h4 class="text-center">{{ 'dayTwo' | translate }}</h4>
-			<ul class="list-group">
-				<li class="list-group-item flex-column align-items-start border-0">
-					<div class="d-flex w-100 justify-content-between">
-						<h5 class="mb-1">{{ 'dayTwoEventOneTitle' | translate }}</h5>
-						<small class="text-muted">From morning till...</small>
-					</div>
-					<p class="mb-1">{{ 'dayTwoEventOneDesc' | translate }}</p>
-					<small class="text-muted">{{ 'dayTwoEventOneFullDate' | translate }}</small>
-				</li>
-			</ul>
+
+		<div class="col-lg-4">
+			<div class="card border-0 h-100">
+				<div class="card-block">
+					<h4 class="card-title text-center">{{ 'dayTwo' | translate }}</h4>
+					<ul class="list-group">
+						<li class="list-group-item flex-column align-items-start border-0">
+							<div class="d-flex w-100 justify-content-between">
+								<h5 class="mb-1">{{ 'dayTwoEventOneTitle' | translate }}</h5>
+							</div>
+							<p class="mb-1">{{ 'dayTwoEventOneDesc' | translate }}</p>
+							<small class="text-muted">{{ 'dayTwoEventOneFullDate' | translate }}</small>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-4">
+			<div class="card border-0 h-100">
+				<div class="card-block">
+					<h4 class="card-title text-center">{{ 'dayThree' | translate }}</h4>
+					<ul class="list-group">
+						<li class="list-group-item flex-column align-items-start border-0">
+							<div class="d-flex w-100 justify-content-between">
+								<h5 class="mb-1">{{ 'dayThreeEventOneTitle' | translate }}</h5>
+							</div>
+							<p class="mb-1">{{ 'dayThreeEventOneDesc' | translate }}</p>
+							<small class="text-muted">{{ 'dayThreeEventOneFullDate' | translate }}</small>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
 
-<div class="container-fluid mt-2">
+<div class="container mt-5">
 	<div class="row">
 		<h1 class="text-center">{{ 'otherInfo' | translate }}</h1>
 	</div>
-</div>
-
-<div class="container-fluid mt-2">
 	<div class="row">
-		<h1 class="text-center">{{ 'ask' | translate }}</h1>
+		<div class="col">
+			<tpw-faq></tpw-faq>
+		</div>
 	</div>
 </div>
 
-<tpw-facebook-comments></tpw-facebook-comments>
+<div class="container mt-5">
+	<div class="row">
+		<h1 class="text-center">{{ 'ask' | translate }}</h1>
+	</div>
+	<div class="row">
+		<div class="col">
+			<div class="card border-0 h-100">
+				<div class="card-block">
+					<tpw-facebook-comments></tpw-facebook-comments>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
