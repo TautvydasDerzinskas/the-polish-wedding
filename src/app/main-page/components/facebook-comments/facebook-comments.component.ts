@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -6,7 +6,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './facebook-comments.component.html',
   styleUrls: ['./facebook-comments.component.scss']
 })
-export class FacebookCommentsComponent implements OnInit {
+export class FacebookCommentsComponent implements OnInit, OnDestroy {
   constructor(
     private route: ActivatedRoute
   ) {}
@@ -17,13 +17,13 @@ export class FacebookCommentsComponent implements OnInit {
     });
   }
 
+  ngOnDestroy() {
+    delete window['FB'];
+  }
+
   public initialize(d, s: string, id: string, language: 'pl' | 'lt' | 'en') {
     let js;
     const fjs = d.getElementsByTagName(s)[0];
-
-    if (d.getElementById(id)) {
-      return;
-    }
 
     js = d.createElement(s);
     js.id = id;
