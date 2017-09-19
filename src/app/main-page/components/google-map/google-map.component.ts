@@ -1,6 +1,8 @@
 
 import { Component, OnInit } from '@angular/core';
 
+declare let google: any;
+
 @Component({
   selector: 'tpw-google-map',
   templateUrl: './google-map.component.html',

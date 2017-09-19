@@ -32,7 +32,7 @@ export class CountDownComponent implements OnInit, OnDestroy {
 
   private getTimeRemaining(endtime) {
     const currentDate: number = (new Date()).getTime(),
-      t = endtime - currentDate,
+      t = currentDate - endtime,
       seconds = Math.floor((t / 1000) % 60),
       minutes = Math.floor((t / 1000 / 60) % 60),
       hours = Math.floor((t / (1000 * 60 * 60)) % 24),

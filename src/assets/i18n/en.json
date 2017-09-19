@@ -1,7 +1,7 @@
 {
 	"headerTitle": "Agnieszka Lis & Tautvydas Derzinskas",
 	"headerDesc": "Wedding event information",
-	"timeRemaining": "{{ days }} days {{ hours }} hours {{ minutes }} minutes and {{ seconds }} seconds remaining!",
+	"timePastWeeding": "{{ days }} days {{ hours }} hours {{ minutes }} minutes and {{ seconds }} seconds have passed since our wedding day!",
 	"welcome": "Welcome! Hi! Hola!",
 	"welcomeDesc": "We danced our first dance six years ago. That's how our friendship started and that's how the strongest love was born! Now we are happy to invite you to join us in our wedding dance!",
 	"locations": "Key locations",

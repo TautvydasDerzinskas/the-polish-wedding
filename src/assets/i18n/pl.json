@@ -1,7 +1,7 @@
 {
 	"headerTitle": "Agnieszka Lis & Tautvydas Derzinskas",
 	"headerDesc": "Informacje o przyjęciu weselnym",
-	"timeRemaining": "Pozostało {{ days }} dni {{ hours }} godzin {{ minutes }} minut i {{ seconds }} sekund",
+	"timePastWeeding": "{{ days }} dni {{ hours }} godzin {{ minutes }} minut i {{ seconds }} sekund minęło od dnia naszego wesela!",
 	"welcome": "Witamy! Hi! Hola!",
 	"welcomeDesc": "Po raz pierwszy zatańczyliśmy razem 6 lat temu. Tak się rozpoczęła nasza znajomość, a później narodziła się miłość. Teraz chcemy zaprosić Was, byście dołączyli do naszego tańca weselnego!",
 	"locations": "Kluczowe lokalizacje",
