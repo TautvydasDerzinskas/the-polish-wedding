@@ -42,6 +42,6 @@ export class CountDownComponent implements OnInit, OnDestroy {
     this.vm_hours = hours;
     this.vm_minutes = minutes;
     this.vm_seconds = seconds;
-  };
+  }
 
 }
