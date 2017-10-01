@@ -2,4 +2,6 @@
 
 # ThePolishWedding
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/SlimDogs/the-polish-wedding.svg)](https://greenkeeper.io/)
+
 Wedding page project
