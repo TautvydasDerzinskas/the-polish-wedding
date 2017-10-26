@@ -1,6 +1,14 @@
 language: node_js
 node_js:
   - "8"
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: GITHUB_TOKEN
+  local_dir: dist
+  fqdn: thepolishwedding.info
+  on:
+    branch: master
 before_install:
     - npm i -g tslint typescript
 cache:
@@ -8,5 +16,4 @@ cache:
     - "node_modules"
 script:
     - npm run lint
-    - npm run test:ci
     - npm run build
