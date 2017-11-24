@@ -3,8 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 
-import { WindowService } from '../../../shared/services/window/window.service';
-import { WindowServiceMock } from '../../../shared/services/window/window.service.mock.spec';
+import { WindowService } from '../../../../shared/services/window/window.service';
+import { WindowServiceMock } from '../../../../shared/services/window/window.service.mock.spec';
 
 import { FacebookCommentsComponent } from './facebook-comments.component';
 

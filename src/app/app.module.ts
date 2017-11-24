@@ -4,14 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { RouterModule } from '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
-import { MainPageModule } from './main-page/main-page.module';
-import { IntroPageComponent } from './intro-page/intro-page.component';
+import { IntroPageModule } from './pages/intro-page/intro-page.module';
+import { MainPageModule } from './pages/main-page/main-page.module';
 
 import { GoogleAnalyticsService } from './shared/services/google-analytics/google-analytics.service';
 
-import { AppComponent } from './app/app.component';
+import { AppComponent } from './app.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -19,15 +19,10 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [
-    IntroPageComponent,
-    AppComponent
-  ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -35,7 +30,12 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
+    RouterModule.forRoot([]),
+    IntroPageModule,
     MainPageModule
+  ],
+  declarations: [
+    AppComponent
   ],
   providers: [
     GoogleAnalyticsService

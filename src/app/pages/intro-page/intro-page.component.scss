@@ -1,4 +1,4 @@
-@import "../shared/styles/mixins";
+@import "../../shared/styles/mixins";
 
 
 // Local variables
@@ -110,7 +110,7 @@ $twp-flags-wrap-shadow-color: rgba(197, 197, 197, 0.8);
     right: 0;
     bottom: 0;
 
-    background: url('../../assets/hearth.png');
+    background: url('../../../assets/hearth.png');
     background-size: auto 50%;
     background-repeat: no-repeat;
     background-position: center center;

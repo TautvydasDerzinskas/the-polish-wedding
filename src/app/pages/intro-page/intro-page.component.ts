@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GoogleAnalyticsService } from '../shared/services/google-analytics/google-analytics.service';
+import { GoogleAnalyticsService } from '../../shared/services/google-analytics/google-analytics.service';
 
 @Component({
   selector: 'tpw-intro-page',

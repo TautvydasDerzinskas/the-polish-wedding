@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { TranslateService } from '@ngx-translate/core';
-import { GoogleAnalyticsService } from '../shared/services/google-analytics/google-analytics.service';
+import { GoogleAnalyticsService } from '../../shared/services/google-analytics/google-analytics.service';
 
 @Component({
   selector: 'tpw-main-page',

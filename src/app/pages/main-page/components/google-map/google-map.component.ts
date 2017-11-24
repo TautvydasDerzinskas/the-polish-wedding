@@ -1,7 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 
-import { WindowService } from '../../../shared/services/window/window.service';
+import { WindowService } from '../../../../shared/services/window/window.service';
 
 @Component({
   selector: 'tpw-google-map',

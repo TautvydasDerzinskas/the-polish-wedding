@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WindowService } from '../../../shared/services/window/window.service';
-import { WindowServiceMock } from '../../../shared/services/window/window.service.mock.spec';
+import { WindowService } from '../../../../shared/services/window/window.service';
+import { WindowServiceMock } from '../../../../shared/services/window/window.service.mock.spec';
 
 import { GoogleMapComponent } from './google-map.component';
 

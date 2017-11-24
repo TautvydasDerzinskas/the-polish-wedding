@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 import { TLanguageCodes, ELanguages } from './facebook-comments.enum';
 
-import { WindowService } from '../../../shared/services/window/window.service';
+import { WindowService } from '../../../../shared/services/window/window.service';
 
 @Component({
   selector: 'tpw-facebook-comments',

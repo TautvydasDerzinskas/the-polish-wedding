@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { GoogleAnalyticsService } from '../shared/services/google-analytics/google-analytics.service';
+import { GoogleAnalyticsService } from '../../shared/services/google-analytics/google-analytics.service';
 
 import { MainPageComponent } from './main-page.component';
 
