@@ -1,6 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+import { TLanguageCodes, ELanguages } from './facebook-comments.enum';
+
+import { WindowService } from '../../../shared/services/window/window.service';
+
 @Component({
   selector: 'tpw-facebook-comments',
   templateUrl: './facebook-comments.component.html',
@@ -8,20 +12,21 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class FacebookCommentsComponent implements OnInit, OnDestroy {
   constructor(
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private windowService: WindowService
   ) {}
 
   ngOnInit() {
     this.route.params.subscribe(params => {
-      this.initialize(document, 'script', 'facebook-jssdk', params['language']);
+      this.initialize(this.windowService.nativeWindow.document, 'script', 'facebook-jssdk', params['language']);
     });
   }
 
   ngOnDestroy() {
-    delete window['FB'];
+    delete this.windowService.nativeWindow.FB;
   }
 
-  public initialize(d, s: string, id: string, language: 'pl' | 'lt' | 'en') {
+  public initialize(d, s: string, id: string, language: TLanguageCodes) {
     let js;
     const fjs = d.getElementsByTagName(s)[0];
 
@@ -32,11 +37,11 @@ export class FacebookCommentsComponent implements OnInit, OnDestroy {
     fjs.parentNode.insertBefore(js, fjs);
   }
 
-  private getLanguageCode(language: 'pl' | 'lt' | 'en') {
+  private getLanguageCode(language: TLanguageCodes) {
     const codes = {
-      pl: 'pl_PL',
-      lt: 'lt_LT',
-      en: 'en_EN'
+      pl: ELanguages.pl,
+      lt: ELanguages.lt,
+      en: ELanguages.en
     };
 
     return codes[language];

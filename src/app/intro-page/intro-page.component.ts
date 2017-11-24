@@ -7,7 +7,6 @@ import { GoogleAnalyticsService } from '../shared/services/google-analytics/goog
   styleUrls: ['./intro-page.component.scss']
 })
 export class IntroPageComponent implements OnInit {
-
   constructor(
     private googleAnalyticsService: GoogleAnalyticsService
   ) {}
@@ -15,5 +14,4 @@ export class IntroPageComponent implements OnInit {
   ngOnInit() {
     this.googleAnalyticsService.trackPageView();
   }
-
 }

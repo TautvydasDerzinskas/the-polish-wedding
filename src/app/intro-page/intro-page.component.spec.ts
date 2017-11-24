@@ -1,5 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { GoogleAnalyticsService } from '../shared/services/google-analytics/google-analytics.service';
+
 import { IntroPageComponent } from './intro-page.component';
 
 describe('IntroPageComponent', () => {
@@ -8,7 +10,12 @@ describe('IntroPageComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IntroPageComponent ]
+      declarations: [
+        IntroPageComponent
+      ],
+      providers: [
+        GoogleAnalyticsService
+      ]
     })
     .compileComponents();
   }));

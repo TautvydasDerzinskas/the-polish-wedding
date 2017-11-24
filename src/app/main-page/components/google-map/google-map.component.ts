@@ -1,16 +1,14 @@
 
 import { Component, OnInit } from '@angular/core';
 
-declare let google: any;
+import { WindowService } from '../../../shared/services/window/window.service';
 
 @Component({
   selector: 'tpw-google-map',
   templateUrl: './google-map.component.html',
-  styleUrls: ['./google-map.component.scss']
 })
 export class GoogleMapComponent implements OnInit {
-
-  private coords = {
+  private _coords = {
     dukla: {
       position: {
         lat: 49.559001,
@@ -34,31 +32,34 @@ export class GoogleMapComponent implements OnInit {
     }
   };
 
-  constructor() { }
+  constructor (
+    private windowService: WindowService
+  ) {}
 
   ngOnInit() {
-    this.initialize();
+    this._initialize();
   }
 
-  private initialize() {
-    const map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 9,
-      center: {
-        lat: 49.829941,
-        lng: 21.881311
-      },
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+  private _initialize() {
+    const map = new this.windowService.nativeWindow.google.maps.Map(
+      this.windowService.nativeWindow.document.getElementById('map'),
+      {
+        zoom: 9,
+        center: {
+          lat: 49.829941,
+          lng: 21.881311
+        },
+        mapTypeId: this.windowService.nativeWindow.google.maps.MapTypeId.ROADMAP
     });
 
-    for (const place in this.coords) {
-      if (this.coords[place]) {
-        const marker = new google.maps.Marker({
-          position: this.coords[place].position,
+    for (const place in this._coords) {
+      if (this._coords[place]) {
+        const marker = new this.windowService.nativeWindow.google.maps.Marker({
+          position: this._coords[place].position,
           map: map,
-          icon: this.coords[place].icon
+          icon: this._coords[place].icon
         });
       }
     }
   }
-
 }

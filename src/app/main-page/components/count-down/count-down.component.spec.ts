@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+
+import { TranslateModule } from '@ngx-translate/core';
 
 import { CountDownComponent } from './count-down.component';
 
@@ -10,7 +10,12 @@ describe('CountDownComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CountDownComponent ]
+      imports: [
+        TranslateModule.forRoot()
+      ],
+      declarations: [
+        CountDownComponent
+      ]
     })
     .compileComponents();
   }));

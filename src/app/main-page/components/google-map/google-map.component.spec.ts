@@ -1,5 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { WindowService } from '../../../shared/services/window/window.service';
+import { WindowServiceMock } from '../../../shared/services/window/window.service.mock.spec';
+
 import { GoogleMapComponent } from './google-map.component';
 
 describe('GoogleMapComponent', () => {
@@ -8,7 +11,12 @@ describe('GoogleMapComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GoogleMapComponent ]
+      declarations: [
+        GoogleMapComponent
+      ],
+      providers: [
+        { provide: WindowService, useClass: WindowServiceMock }
+      ]
     })
     .compileComponents();
   }));
@@ -23,3 +31,4 @@ describe('GoogleMapComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

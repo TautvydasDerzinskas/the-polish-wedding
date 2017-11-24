@@ -4,8 +4,7 @@ import { TimerObservable } from 'rxjs/observable/TimerObservable';
 
 @Component({
   selector: 'tpw-count-down',
-  templateUrl: './count-down.component.html',
-  styleUrls: ['./count-down.component.scss']
+  templateUrl: './count-down.component.html'
 })
 export class CountDownComponent implements OnInit, OnDestroy {
   private subscription;
