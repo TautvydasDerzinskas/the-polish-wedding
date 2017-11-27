@@ -48,7 +48,7 @@
     "protractor": "5.2.0",
     "ts-node": "3.3.0",
     "tslint": "5.8.0",
-    "typescript": "2.6.1",
+    "typescript": "2.6.2",
     "cz-conventional-changelog": "2.1.0"
   },
   "config": {
