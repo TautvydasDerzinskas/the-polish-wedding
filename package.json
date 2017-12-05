@@ -26,7 +26,7 @@
     "@types/googlemaps": "3.29.00",
     "bootstrap": "4.0.0-beta.2",
     "core-js": "2.5.1",
-    "rxjs": "5.5.3",
+    "rxjs": "5.5.4",
     "zone.js": "0.8.18"
   },
   "devDependencies": {
