@@ -30,7 +30,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    RouterModule.forRoot([]),
+    RouterModule.forRoot([], { useHash: true }),
     IntroPageModule,
     MainPageModule
   ],
