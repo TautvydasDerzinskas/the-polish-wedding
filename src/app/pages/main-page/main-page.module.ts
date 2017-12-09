@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { Routes, RouterModule } from '@angular/router';
+import { NgxGalleryModule } from 'ngx-gallery';
 
 import { GoogleMapComponent } from './components/google-map/google-map.component';
 import { CountDownComponent } from './components/count-down/count-down.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
+    NgxGalleryModule,
     TranslateModule,
     RouterModule.forChild(routes)
   ],

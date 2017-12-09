@@ -6,6 +6,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { NgxGalleryModule } from 'ngx-gallery';
 
 import { GoogleAnalyticsService } from '../../shared/services/google-analytics/google-analytics.service';
 
@@ -35,6 +36,7 @@ describe('MainPageComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         HttpClientTestingModule,
+        NgxGalleryModule,
         TranslateModule.forRoot({
           loader: {
             provide: TranslateLoader,

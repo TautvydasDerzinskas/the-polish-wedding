@@ -65,3 +65,52 @@ $places: dukla, krosno, rzeszow;
 		}
 	}
 }
+
+%tpw-icon {
+	color: $tpw-primary;
+	font-size: 32px;
+	line-height: 32px;
+	text-align: center;
+	font-style: normal;
+	font-weight: bold;
+
+	-webkit-text-stroke: 1px black;
+	text-shadow:
+			3px 3px 0 #000,
+		-1px -1px 0 #000,
+		 1px -1px 0 #000,
+		 -1px 1px 0 #000,
+			1px 1px 0 #000;
+}
+
+.tpw-gallery {
+	margin: 0 auto;
+
+	.tpw-icon {
+		display: inline-block;
+		height: 32px;
+		width: 32px;
+		cursor: pointer;
+
+		&--arrow-right {
+			&::before {
+				content: ">";
+				@extend %tpw-icon;
+			}
+		}
+
+		&--arrow-left {
+			&::before {
+				content: "<";
+				@extend %tpw-icon;
+			}
+		}
+
+		&--close {
+			&::before {
+				content: "x";
+				@extend %tpw-icon;
+			}
+		}
+	}
+}
