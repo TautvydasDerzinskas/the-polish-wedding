@@ -21,7 +21,7 @@
     "@angular/platform-browser": "5.1.1",
     "@angular/platform-browser-dynamic": "5.1.1",
     "@angular/router": "5.1.1",
-    "@ngx-translate/core": "9.0.1",
+    "@ngx-translate/core": "9.0.2",
     "@ngx-translate/http-loader": "2.0.0",
     "@types/googlemaps": "3.29.00",
     "bootstrap": "4.0.0-beta.2",
