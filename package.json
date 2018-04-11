@@ -26,7 +26,7 @@
     "@types/googlemaps": "3.29.00",
     "bootstrap": "4.0.0-beta.2",
     "core-js": "2.5.3",
-    "ngx-gallery": "4.1.2",
+    "ngx-gallery": "5.3.2",
     "rxjs": "5.5.6",
     "zone.js": "0.8.20"
   },
