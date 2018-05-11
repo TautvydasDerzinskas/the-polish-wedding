@@ -20,7 +20,7 @@
     "@angular/http": "5.2.0",
     "@angular/platform-browser": "5.2.0",
     "@angular/platform-browser-dynamic": "5.2.0",
-    "@angular/router": "5.2.0",
+    "@angular/router": "6.0.1",
     "@ngx-translate/core": "9.1.0",
     "@ngx-translate/http-loader": "2.0.1",
     "@types/googlemaps": "3.29.00",
