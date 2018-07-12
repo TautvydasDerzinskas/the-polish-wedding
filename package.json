@@ -24,7 +24,7 @@
     "@ngx-translate/core": "9.1.0",
     "@ngx-translate/http-loader": "2.0.1",
     "@types/googlemaps": "3.29.00",
-    "bootstrap": "4.0.0-beta.2",
+    "bootstrap": "4.1.2",
     "core-js": "2.5.3",
     "ngx-gallery": "4.1.2",
     "rxjs": "5.5.6",
